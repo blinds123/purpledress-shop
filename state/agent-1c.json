@@ -1,0 +1,34 @@
+{
+  "pool_url": "https://simpleswap-automation-1.onrender.com",
+  "health_status": "healthy",
+  "pool_19": 15,
+  "pool_29": 15,
+  "pool_59": 15,
+  "total": 45,
+  "meets_minimum": true,
+  "actions_taken": [
+    "Verified pool health - status: healthy",
+    "Confirmed all tiers exceed minimum requirements (>=5 exchanges)",
+    "Pool running in dynamic mode with instant replenishment",
+    "Total consumed: 2, Total replenished: 14, Failed: 2",
+    "Last health check: 2025-11-30T10:26:47.204Z",
+    "Server uptime: ~3 hours since 2025-11-30T07:39:46.677Z"
+  ],
+  "persistence": "render_disk_enabled",
+  "version": "5.0.0-BULLETPROOF",
+  "features": [
+    "Instant replenishment on consumption",
+    "3 retries with exponential backoff",
+    "60s health check catches failures",
+    "5min self-ping prevents sleep"
+  ],
+  "stats": {
+    "totalConsumed": 2,
+    "totalReplenished": 14,
+    "failedReplenishments": 2,
+    "lastHealthCheck": "2025-11-30T10:26:47.204Z",
+    "serverStartTime": "2025-11-30T07:39:46.677Z"
+  },
+  "status": "complete",
+  "timestamp": "2025-11-30T10:27:05.000Z"
+}
