@@ -217,11 +217,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 6
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .product-hero { grid-template-columns: 1fr; gap: 24px; padding: 16px; }
-  .gallery { position: static; }
-  .main-img { border-radius: 12px; }
-  .trust-badges { gap: 12px; }
+  .product-hero { grid-template-columns: 1fr; gap: 24px; padding: 16px; max-width: 100vw; overflow-x: hidden; }
+  .gallery { position: static; max-width: 100%; }
+  .main-img { border-radius: 12px; max-width: 100%; width: 100%; }
+  .product-info { max-width: 100%; overflow-x: hidden; }
+  .trust-badges { gap: 12px; flex-wrap: wrap; }
   .trust-badge { font-size: 13px; }
+  .thumbnails { max-width: 100%; overflow-x: auto; }
 }
 
 /* Animations */
@@ -512,7 +514,7 @@ function closeOrderBumpPopup() {
 
 function acceptOrderBump() {
   closeOrderBumpPopup();
-  const amount = window.currentOrderType === 'primary' ? 59 : 29;
+  const amount = window.currentOrderType === 'primary' ? 69 : 29;
   processOrder(amount);
 }
 
