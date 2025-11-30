@@ -1,21 +1,21 @@
-# Performance optimizations for Netlify
 /*
-  Cache-Control: public, max-age=31536000, immutable
-  X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
 
-# Preconnect to speed up redirects
-/*
-  Link: <https://burgundyset.netlify.app>; rel=preconnect
-  Link: <https://burgundyset.netlify.app>; rel=dns-prefetch
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
 
-# Cache static assets aggressively
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
 /images/*
   Cache-Control: public, max-age=31536000, immutable
 
-/css/*
+/*.css
   Cache-Control: public, max-age=31536000, immutable
 
-/js/*
+/*.js
   Cache-Control: public, max-age=31536000, immutable
